@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>search States</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="searchContainer">
+    <ion-searchbar showCancelButton="focus" color="danger" placeholder="Search the Name" (keyup.enter)="mySearchFunction($event)"></ion-searchbar>
+  </div>
+  <ion-card>
+    <table *ngIf="tableData">
+      <thead>
+        <th>S.No</th>
+        <th>States Names</th>
+      </thead>
+      <tbody>
+        <div id="rec">
+          <h4 *ngIf="Records">No Records Found</h4> 
+        </div>     
+  <tr *ngFor="let item of test">
+          <td>{{item.id}}</td>
+          <th>{{item.name}}</th>
+        </tr>
+      </tbody>
+    </table>
+  </ion-card>
+</ion-content>

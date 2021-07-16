@@ -1,0 +1,23 @@
+.searchContainer {
+  margin-top: 50px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+  }
+  
+  thead{
+      background-color: lightgray;
+      color: black;
+
+  }
+  td, th {
+    text-align: center;
+    padding: 8px;
+  }
+  #rec h4 {
+   text-align: center;
+    color: blue;
+  }

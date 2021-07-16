@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     Upload Image
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <ion-button color="primary" size="small" (click)="openCamera()">Open Camera</ion-button>
+    <ion-button color="primary" size="small" (click)="openGallery()">Open Gallery</ion-button>
+    <ion-button color="primary" size="small" (click)="getImages()">Choose Images</ion-button>
+    <!-- <img [src]="base64Image"> -->
+    <div class="images">
+      <div class="one-image" *ngFor="let img of multipleImg">
+        <img [src]="img">
+      </div>
+    </div>
+    <div *ngIf="uploader">
+      <h4>Upload Progress <span *ngIf="p_bar_value">{{p_bar_value | number}}%</span></h4>
+      <ion-progress-bar [value]="p_bar_value / 100" *ngIf="showLoader"></ion-progress-bar>
+    </div>
+    <ion-button color="primary" size="small" (click)="uploadImage()">Upload File</ion-button>
+  </div>
+  <div>
+    <ion-button color="danger" size="small" (click)="nextPage()">Next Page</ion-button>
+  </div>
+</ion-content>
